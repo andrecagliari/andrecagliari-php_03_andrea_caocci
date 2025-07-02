@@ -7,18 +7,18 @@ $words1 = [
   'colle',
   'mi',
   'sempre',
-[
-  'oscura',
-  'era',
-  89,
   [
-  'mezzo',
-   'E'
+    'oscura',
+    'era',
+    89,
+    [
+      'mezzo',
+      'E'
+    ],
+    'ritrovai',
+    'per'
   ],
-'ritrovai',
-'per'
-],
-'diritta'
+  'diritta'
 ];
 
 $words2 = [
@@ -30,14 +30,40 @@ $words2 = [
     'favore',
     ['fortuna']
   ],
- 'fine' => '!'
+  'fine' => '!'
 ];
 
-$words1[] = 'la';
-$words1[] = 'a';
-// print_r($words1);
-// print_r($words2);
+// Variabili extra per parole non presenti nei due array
+$cammin = "cammin";
+$nostra = "nostra";
+$vita = "vita";
+$una = "una";
+$selva = "selva";
+$che = "che'";
+$la = "la";
+$smarrita = "smarrita";
 
-$results = $words1[6][3][1] . " " . $words2['elemento2'] . " " . $words1[8] . " " . $words2['elemento3'][3][0] . " " . $words1[2] . " " . $words1[5] . " " . $words1[9] . " " . $words1[0] . " " . $words2['elemento3'][2] . $words2['fine'] . "\n";
+// Componiamo la frase
+$results = "Nel " 
+  . $words1[6][3][0] . " "          // mezzo
+  . "di " 
+  . $cammin . " " 
+  . "di " 
+  . $nostra . " " 
+  . $vita . " " 
+  . $words1[4] . " "                // mi
+  . $words1[6][4] . " "             // ritrovai
+  . $words1[6][5] . " "             // per
+  . $una . " " 
+  . $selva . " " 
+  . $words1[6][0] . ", "            // oscura
+  . $che . " " 
+  . $la . " " 
+  . $words1[7] . " "                // diritta
+  . "via " 
+  . $words1[6][1] . " "             // era
+  . $smarrita . ".";
 
 echo $results;
+
+?>
